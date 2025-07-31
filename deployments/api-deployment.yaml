@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: routify-api
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: routify-api
+  template:
+    metadata:
+      labels:
+        app: routify-api
+    spec:
+      containers:
+        - name: api
+          image: your-dockerhub-username/routify-api:latest
+          ports:
+            - containerPort: 50051
+          env:
+            - name: REDIS_ADDR
+              value: redis:6379
+            - name: POSTGRES_CONN
+              value: postgres://user:password@postgres:5432/routify?sslmode=disable
