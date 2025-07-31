@@ -1,0 +1,7 @@
+# Postgres config for deployment
+database:
+  name: routify
+  user: user
+  password: password
+  host: postgres
+  port: 5432

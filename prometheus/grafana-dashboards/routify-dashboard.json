@@ -1,0 +1,16 @@
+{
+    "title": "Routify Dashboard",
+    "panels": [
+      {
+        "type": "graph",
+        "title": "gRPC Request Latency",
+        "targets": [{ "expr": "grpc_server_handling_seconds" }]
+      },
+      {
+        "type": "graph",
+        "title": "Redis Hit Rate",
+        "targets": [{ "expr": "redis_key_hits" }]
+      }
+    ]
+  }
+  

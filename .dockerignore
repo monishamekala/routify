@@ -1,0 +1,35 @@
+# Go build cache and binaries
+bin/
+*.exe
+*.out
+*.test
+
+# Node and React build artifacts
+ui/node_modules
+ui/dist
+ui/build
+
+# Ignore logs
+*.log
+logs/
+
+# Ignore editor & system files
+.DS_Store
+.idea/
+.vscode/
+*.swp
+*.swo
+Thumbs.db
+
+# Git-related
+.git
+.gitignore
+
+# Docker files that shouldn't be in image
+.dockerignore
+docker-compose.yml
+
+# Env files and secrets
+*.env
+.env
+.env.*

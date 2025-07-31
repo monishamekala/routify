@@ -1,0 +1,21 @@
+routify-transit-optimizer/
+├── cmd/                      # Main app entry points
+│   ├── api/                  # gRPC server
+│   └── planner/              # Trip planner CLI
+├── internal/                 # Core business logic
+│   ├── routing/              # Dijkstra/A* routing engine
+│   ├── simulation/           # Simulation logic
+│   └── storage/              # Redis & PostgreSQL integration
+├── proto/                   # gRPC service definitions
+├── ui/                      # React frontend (Mapbox integrated)
+│   └── ...
+├── deployments/             # Kubernetes YAML files
+├── docker/                  # Dockerfiles
+├── scripts/                 # Setup and automation scripts
+├── configs/                 # Config files (YAML, JSON, ENV)
+├── prometheus/              # Prometheus/Grafana configs
+├── Makefile
+├── docker-compose.yml
+├── README.md
+├── go.mod
+└── LICENSE

@@ -13,6 +13,11 @@ const (
     port = ":50051"
 )
 
+grpcServer := grpc.NewServer(
+    grpc.UnaryInterceptor(auth.UnaryJWTInterceptor()),
+)
+
+
 type server struct {
     pb.UnimplementedRoutePlannerServer
 }
