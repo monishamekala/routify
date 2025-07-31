@@ -24,11 +24,28 @@ Routify is built to solve the challenge of planning efficient public transit tri
 
 ## 🧱 Architecture
 
-- **Backend**: Go + gRPC microservices
-- **Frontend**: React + Mapbox
-- **Database**: PostgreSQL for static data, Redis for caching
-- **Orchestration**: Docker + Kubernetes
-- **Monitoring**: Prometheus + Grafana dashboards
+Routify is designed with scalability, real-time performance, and observability in mind. The system is composed of loosely coupled components, each chosen to address a specific concern effectively.
+
+### Backend: Go + gRPC Microservices
+The backend is implemented in Go for its high performance, built-in concurrency support, and fast execution.  
+gRPC is used instead of traditional REST APIs to enable low-latency, strongly typed communication between microservices, along with built-in streaming and code generation.
+
+### Frontend: React + Mapbox
+React is used for its declarative UI model and component-based architecture, enabling fast development and maintainability.  
+Mapbox provides dynamic, high-resolution maps and is used to visualize trip routes and live simulation overlays in real time.
+
+### Database: PostgreSQL and Redis
+PostgreSQL serves as the primary database, storing structured data such as transit schedules and metadata.  
+Redis is used as a high-speed in-memory cache to store frequently accessed route results and session data, enabling sub-150ms average response times even under heavy load.
+
+### Orchestration: Docker + Kubernetes
+All services are containerized using Docker to ensure consistent behavior across development, staging, and production environments.  
+Kubernetes is used for service orchestration, offering horizontal scalability, high availability, rolling deployments, and fault tolerance.
+
+### Monitoring and Tracing: Prometheus, Grafana, and Jaeger
+Prometheus collects runtime metrics from each service.  
+Grafana is used to visualize those metrics through real-time dashboards.  
+Jaeger is integrated via OpenTelemetry for distributed tracing, helping to analyze and debug latency issues across service boundaries.
 
 ## 📦 Getting Started
 
