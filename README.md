@@ -3,9 +3,16 @@
 **Personal Project**  
 Tech Stack: Go, gRPC, Redis, PostgreSQL, Docker, Kubernetes, Mapbox, React, Prometheus
 
-## 🚀 Overview
+## 🔍 Overview
 
-Routify is a full-stack, real-time transit route optimizer built to compute multi-modal routes with high concurrency and live traffic integration.
+Routify is built to solve the challenge of planning efficient public transit trips across multiple transportation modes in real time. It features:
+
+- 🚦 Real-time routing engine with Dijkstra/A* search
+- 🌐 Mapbox-powered frontend for trip visualization
+- ⚡ gRPC backend supporting 1000+ concurrent requests/sec
+- 🧠 Live traffic simulation and Redis caching
+- 📊 Full observability with Prometheus, Grafana, and Jaeger
+- 🐳 Microservice deployment via Docker and Kubernetes
 
 ### ⚙️ Features
 
