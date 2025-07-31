@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+package routeplanner;
+
+option go_package = "github.com/yourusername/routify/proto;proto";
+
+// Request for route planning
+message RouteRequest {
+  string origin = 1;
+  string destination = 2;
+}
+
+// Response with planned steps
+message RouteResponse {
+  repeated string steps = 1;
+  float total_time = 2;
+}
+
+// Service definition
+service RoutePlanner {
+  rpc PlanRoute(RouteRequest) returns (RouteResponse);
+}
